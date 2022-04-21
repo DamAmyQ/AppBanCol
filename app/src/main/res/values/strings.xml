@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BanColombia</string>
+    <string name="title_activity_personal_date">PersonalDate</string>
+    <string name="crear_producto">CREAR PRODUCTO</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="prev">Volver</string>
+    <string name="next">Siguiente</string>
+
+</resources>

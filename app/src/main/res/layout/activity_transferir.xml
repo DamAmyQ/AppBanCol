@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grisbackground"
+    tools:context=".Transferir">
+
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004">
+
+
+        <Button
+            android:id="@+id/volvmain"
+            style="?attr/borderlessButtonStyle"
+            android:layout_marginTop="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_chevron_left_24"
+            android:text="@string/prev"
+            android:textSize="11sp"
+            android:textAllCaps="false"
+            android:textColor="@color/blackwrite"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/logo_bancolombia"
+            android:layout_width="45dp"
+            android:layout_marginTop="3dp"
+            android:layout_height="45dp"
+            android:src="@drawable/bancamano2"
+            android:layout_weight="1"
+            android:background="@color/grisbackground"/>
+
+        <Button
+            android:id="@+id/historial"
+            style="?attr/borderlessButtonStyle"
+            android:layout_marginTop="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_baseline_chevron_right_24"
+            android:text="Historial"
+            android:textSize="11sp"
+            android:textAllCaps="false"
+            android:textColor="@color/blackwrite"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saldo disponible"
+        android:textSize="16sp"
+        android:textColor="@color/blackwrite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintVertical_bias="0.04"/>
+
+    <TextView
+        android:id="@+id/signo_peso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blackwrite"
+        android:textStyle="bold"
+        android:padding="0dp"
+        android:layout_marginTop="0dp"
+        android:textSize="30sp"
+        android:text="$"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <TextView
+        android:id="@+id/saldoactual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blackwrite"
+        android:textStyle="bold"
+        android:padding="0dp"
+        android:layout_marginTop="0dp"
+        android:textSize="30sp"
+        android:text="0"
+        android:layout_marginStart="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/signo_peso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <TextView
+        android:id="@+id/comision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/blackwrite"
+        android:textSize="13sp"
+        android:text="Comisión por transacción: $500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signo_peso"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintVertical_bias="0.0"
+
+        />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="0dp"
+        android:paddingBottom="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comision"
+        app:layout_constraintBottom_toTopOf="@+id/layout2"
+        >
+        <LinearLayout
+            android:id="@+id/layout_principal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="17dp"
+            android:elevation="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="30dp"
+            android:paddingTop="23dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="40dp"
+            android:gravity="center"
+            android:background="@color/whitebackground"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView1">
+
+
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.49"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textfield1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Numero de telefono"
+                app:boxBackgroundColor="@color/whitebackground"
+                android:textColorHint="@color/blackwrite"
+                app:startIconDrawable="@drawable/telefono"
+                app:startIconTint="@color/black"
+                android:paddingBottom="0dp"
+                android:enabled="true"
+                >
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/numero_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:inputType="date"
+                    android:imeOptions="actionNext"
+                    android:paddingBottom="0dp"
+                    android:maxLength="10"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:layout_height="wrap_content"
+                android:hint="Valor a transferir"
+                app:boxBackgroundColor="@color/whitebackground"
+                android:textColorHint="@color/blackwrite"
+                app:startIconDrawable="@drawable/enviardinero"
+                app:startIconTint="@color/black"
+                android:paddingBottom="0dp"
+                android:enabled="true"
+                >
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/valor_transferencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:inputType="number"
+                    android:imeOptions="actionNext"
+                    android:paddingBottom="0dp"
+                    android:maxLength="10"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/spin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="egh"
+                    android:visibility="invisible"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whitebackground"
+        android:elevation="9dp"
+        android:orientation="vertical"
+        android:outlineSpotShadowColor="@color/black"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView1"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/button_transfer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Transferir"
+            android:textAllCaps="false"
+            android:textColor="@color/blackwrite"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:cornerRadius="30dp"
+             />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

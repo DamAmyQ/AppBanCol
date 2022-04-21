@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grisbackground"
+    tools:context=".Movimientos">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004">
+
+
+        <Button
+            android:id="@+id/volveruser"
+            style="?attr/borderlessButtonStyle"
+            android:layout_marginTop="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_chevron_left_24"
+            android:text="@string/prev"
+            android:textSize="11sp"
+            android:textAllCaps="false"
+            android:textColor="@color/blackwrite"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/logo_bancolombia"
+            android:layout_width="45dp"
+            android:layout_marginTop="3dp"
+            android:layout_height="45dp"
+            android:src="@drawable/bancamano2"
+            android:layout_weight="1"
+            android:background="@color/grisbackground"/>
+
+        <Button
+            android:id="@+id/button1Next1"
+            style="?attr/borderlessButtonStyle"
+            android:layout_marginTop="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text=""
+            android:textSize="11sp"
+            android:textAllCaps="false"
+            android:textColor="@color/blackwrite"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blackwrite"
+        android:textStyle="bold"
+        android:padding="0dp"
+        android:layout_marginTop="0dp"
+        android:textSize="20sp"
+        android:text="Saldos y Movimientos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout1"
+        app:layout_constraintVertical_bias="0.03" />
+
+        <ListView
+            android:id="@+id/lista"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="17dp"
+            android:elevation="2dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="40dp"
+            android:paddingTop="23dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="40dp"
+            android:gravity="center"
+            android:background="@color/whitebackground"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+
+        </ListView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
